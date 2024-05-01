@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "json2csv": "^6.0.0-alpha.2",
+    "lodash": "^4.17.21",
+    "puppeteer": "^22.2.0"
+  }
+}
