@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .navlink {
+    @apply text-lg font-medium;
+  }
+}
+
+@layer no-tailwindcss {
+  /* This layer is disabled */
+  @variants {
+    .no-tailwindcss {
+      all: unset;
+    }
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+.swiper-slide {
+  background: white !important;
+  border-radius: 2.5rem;
+  color: #091540;
+}
+
+.swiper-slide-active,
+.swiper-slide-previous {
+  transition:
+    height 2s ease-in-out,
+    width 0.2s !important;
+}
+
+.swiper-slide-next {
+  height: 30rem !important;
+  width: 30rem !important;
+  transition:
+    height 2s ease-in-out,
+    width 0.2s !important;
+  background: #091540 !important;
+  color: white !important;
+}
+
+@media (max-width: 960px) {
+  .swiper-slide-next {
+    height: 20rem !important;
+    width: 20rem !important;
+    transition: height 2s ease-in-out, width 0.2s !important;
+    background: #091540 !important;
+    color: white !important;
+  }
+}
+
+.swiper-pagination {
+    position: relative !important;
+    top: -10rem !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    left: 4rem !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: .65rem !important;
+  height: .65rem !important;
+  background-color: black !important;
+}
+
+.dot-elastic {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #57A3BC;
+  color: #57A3BC;
+  animation: dot-elastic 1s infinite linear;
+}
+
+.dot-elastic::before, .dot-elastic::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-elastic::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #57A3BC;
+  color: #57A3BC;
+  animation: dot-elastic-before 1s infinite linear;
+}
+.dot-elastic::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #57A3BC;
+  color: #57A3BC;
+  animation: dot-elastic-after 1s infinite linear;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-download {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#020202 94%,#0000) top/4px 4px no-repeat,
+    conic-gradient(#0000 30%,#020202);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 4px),#000 );
+  animation: l13 1.5s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+
+@keyframes dot-elastic-before {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.5);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes dot-elastic {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes dot-elastic-after {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* .animation-hover:after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  height: 2px;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  @apply w-0 bg-gpt-blue left-1/2 block bottom-0 absolute;
+}
+.animation-active:after {
+  @apply left-0 w-full;
+}
+.animation-hover:hover:after {
+  @apply left-0 w-full;
+} */
+
+@media only screen and (max-width: 480px)
+{
+.Toastify__toast-container {
+    width: 60vw!important;
+    right: 0!important;
+    margin-top: 4px!important;
+    left:auto!important;
+}
+}
+
+.mantine-Textarea-input{
+  border: none !important;
+  font-family: inherit !important;
+  padding: 0!important;
+  font-size: 18px !important;
+  min-height: 26px !important;
+  height: 28px !important;
+}
+.mantine-Textarea-input:focus{
+  border: none !important;
+  box-shadow: none !important;
+}

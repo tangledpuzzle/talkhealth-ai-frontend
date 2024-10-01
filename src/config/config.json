@@ -1,0 +1,5 @@
+{
+    "initprompts": "I have a medical question; Help me with my test results; Question about my meds; Question about my symptoms",
+    "initnewChat": "Ok! Let’s talk about another medical topic. What do you want to learn?",
+    "initChat": "Welcome to Talkhealth.AI, your personal health assistant! You can ask any medical question, or if you would like, share your test results here and I can help interpret them for you. How can I assist you today?"
+}

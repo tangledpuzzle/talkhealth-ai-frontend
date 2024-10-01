@@ -1,0 +1,32 @@
+.slick-dots {
+  display: flex;
+  position: static !important;
+  justify-content: center;
+  margin-top: 30px !important;
+}
+
+.slick-dots > li {
+  margin: 0 0.25rem;
+}
+
+.slick-dots > button {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+
+  border: none;
+  border-radius: 100%;
+  background-color: blue;
+
+  text-indent: -9999px;
+}
+
+.slick-dots li > button::before {
+  color: #10b3ef !important;
+}
+
+.slick-dots li.slick-active button::before {
+  font-size: 10px;
+  color: #091540 !important;
+}

@@ -1,0 +1,103 @@
+.blog-slider .slick-dots {
+  display: flex;
+  position: absolute !important;
+  justify-content: center;
+  margin-top: 30px !important;
+  width: fit-content;
+  left: 3.5rem;
+  bottom: 5rem!important;
+}
+
+.blog-slider .slick-dots > li {
+  margin: 0 0.25rem;
+}
+
+.blog-slider .slick-dots li > button::before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.blog-slider .slick-dots li.slick-active button::before {
+  font-size: 10px;
+  color: #091540 !important;
+}
+
+.blog-slider .slick-current > div >  div >  div {
+  background-color: #091540;
+  color: white;
+}
+
+.blog-slider .slick-current > div> div> div > div {
+  height: 20rem;
+}
+
+.blog-slider .slick-current{
+  width: 30rem!important;
+}
+.blog-slider .slick-cloned {
+  display: hidden!important;
+  height: 0!important;
+}
+.blog-slider .slick-list {
+  overflow: visible!important;
+  transform: translate(-5rem,0)!important;
+}
+
+.car-btn:hover {
+  background: #bbbbbd!important;
+}
+
+@media (max-width: 1400px) {
+  .blog-slider .slick-current{
+    width: 24rem!important;
+  }
+
+  .blog-slider .slick-list {
+    overflow: visible!important;
+    transform: translate(-3rem,0)!important;
+  }
+}
+
+@media (max-width: 950px) {
+  .blog-slider .slick-current{
+    width: 95vw!important;
+  }
+
+  .blog-slider .slick-dots {
+    position: static!important;
+    padding: 0 !important;
+      width: 90%;
+      margin: 0 10px;
+  }
+
+  .blog-slider .slick-dots >* {
+    display: flex;
+    margin: 0 !important;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%!important;
+  }
+
+  .blog-slider .slick-list {
+    overflow: visible!important;
+    transform: translate(0)!important;
+  }
+
+  .blog-slider .slick-slide > div> div> div > div {
+    height: 20rem;
+  }
+}
+
+
+@media (max-width: 624px) {
+  .blog-slider .slick-dots >* {
+    display: flex;
+    margin: 0 !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%!important;
+  }
+  .blog-slider .slick-current{
+    width: 97vw!important;
+  }
+}

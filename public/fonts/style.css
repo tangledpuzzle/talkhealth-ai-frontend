@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Oracle";
+  font-style: normal;
+  src: url("./Oracle.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Alpina Condensed";
+  font-style: normal;
+  src: url("./GT\ Alpina\ INF\ Condensed\ Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Alpina";
+  font-style: normal;
+  src: url("./GT\ Alpina\ INF\ VF.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Alpina Italic";
+  font-style: normal;
+  src: url("./GT\ Alpina\ INF\ VF\ Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./lato-regular.woff2") format("woff2");
+}
